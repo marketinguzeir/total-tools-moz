@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --main-color: #006b75; /* Sua cor personalizada */
+            --main-color: #006b75; 
             --bg-color: #ffffff;
             --text-color: #006b75;
             --light-grey: #f4f7f7;
@@ -21,12 +21,11 @@
             color: var(--text-color);
         }
 
-        /* Header */
         header {
             background-color: var(--bg-color);
-            padding: 20px 5%;
+            padding: 25px 5%;
             text-align: center;
-            border-bottom: 2px solid var(--main-color);
+            border-bottom: 3px solid var(--main-color);
         }
 
         .logo-text {
@@ -36,7 +35,6 @@
             letter-spacing: 2px;
         }
 
-        /* Banner */
         .hero {
             background-color: var(--main-color);
             color: white;
@@ -44,100 +42,106 @@
             text-align: center;
         }
 
-        .hero h1 { margin: 0; font-size: 24px; }
+        .hero h1 { margin: 0; font-size: 24px; text-transform: uppercase; }
 
-        /* Container de Dealers */
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: 20px auto 60px;
             padding: 0 20px;
         }
 
         .city-header {
-            border-bottom: 2px solid var(--main-color);
+            background-color: var(--light-grey);
+            border-left: 6px solid var(--main-color);
             margin: 40px 0 20px;
-            padding-bottom: 10px;
-            font-size: 22px;
+            padding: 12px 20px;
+            font-size: 20px;
+            font-weight: bold;
             display: flex;
             align-items: center;
+            text-transform: uppercase;
         }
 
-        .city-header i { margin-right: 10px; }
+        .city-header i { margin-right: 15px; }
 
         .dealer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
         }
 
         .card {
             border: 1px solid #e0e0e0;
             border-radius: 12px;
             padding: 25px;
-            background: var(--light-grey);
+            background: white;
             transition: 0.3s;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .card:hover {
-            box-shadow: 0 5px 15px rgba(0,107,117,0.2);
+            box-shadow: 0 8px 20px rgba(0,107,117,0.15);
+            transform: translateY(-3px);
         }
 
         .card h3 {
             margin-top: 0;
-            font-size: 20px;
+            font-size: 22px;
             color: var(--main-color);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
         }
 
         .info-row {
             display: flex;
-            margin-bottom: 15px;
-            font-size: 14px;
-            line-height: 1.4;
+            margin: 12px 0;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #444;
         }
 
         .info-row i {
-            width: 25px;
+            width: 30px;
             color: var(--main-color);
-            font-size: 16px;
+            font-size: 18px;
+            margin-top: 3px;
         }
 
-        /* Botões */
         .btn-group {
             margin-top: auto;
             display: flex;
-            gap: 10px;
+            gap: 12px;
+            padding-top: 20px;
         }
 
         .btn {
             flex: 1;
             text-align: center;
-            padding: 12px;
-            border-radius: 6px;
+            padding: 14px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 13px;
+            font-size: 14px;
             transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
-        }
-
-        .btn-call {
-            background-color: var(--main-color);
-            color: white;
-        }
-
-        .btn:hover { opacity: 0.8; }
+        .btn-whatsapp { background-color: #25D366; color: white; }
+        .btn-call { background-color: var(--main-color); color: white; }
+        .btn:hover { filter: brightness(0.9); }
 
         footer {
+            background-color: #f9f9f9;
             text-align: center;
-            padding: 40px;
-            font-size: 12px;
+            padding: 50px 20px;
+            font-size: 14px;
             color: #666;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
@@ -148,13 +152,13 @@
     </header>
 
     <section class="hero">
-        <h1>REDE DE DEALERS OFICIAIS</h1>
-        <p>Encontre a loja mais próxima de si</p>
+        <h1>Representantes Oficiais</h1>
+        <p>A maior rede de ferramentas profissionais de Moçambique</p>
     </section>
 
     <div class="container">
 
-        <div class="city-header"><i class="fas fa-map-marked-alt"></i> Maputo</div>
+        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Maputo</div>
         <div class="dealer-grid">
             <div class="card">
                 <h3>Prestige Home</h3>
@@ -167,8 +171,8 @@
                     <span>+258 87 348 4835</span>
                 </div>
                 <div class="btn-group">
-                    <a href="tel:+258873484835" class="btn btn-call">Ligar</a>
-                    <a href="https://wa.me/258845106764" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="tel:+258873484835" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
+                    <a href="https://wa.me/258845106764" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
 
@@ -183,13 +187,13 @@
                     <span>+258 84 984 0000</span>
                 </div>
                 <div class="btn-group">
-                    <a href="tel:+258849840000" class="btn btn-call">Ligar</a>
-                    <a href="https://wa.me/258849840000" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="tel:+258849840000" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
+                    <a href="https://wa.me/258849840000" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
         </div>
 
-        <div class="city-header"><i class="fas fa-map-marked-alt"></i> Beira</div>
+        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Beira</div>
         <div class="dealer-grid">
             <div class="card">
                 <h3>TOTAL Mart</h3>
@@ -202,13 +206,13 @@
                     <span>+258 84 335 0200 / 86 613 0000</span>
                 </div>
                 <div class="btn-group">
-                    <a href="tel:+258843350200" class="btn btn-call">Ligar</a>
-                    <a href="https://wa.me/258843350200" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="tel:+258843350200" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
+                    <a href="https://wa.me/258843350200" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
         </div>
 
-        <div class="city-header"><i class="fas fa-map-marked-alt"></i> Tete</div>
+        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Tete</div>
         <div class="dealer-grid">
             <div class="card">
                 <h3>Top Total ferragem Tete</h3>
@@ -217,11 +221,30 @@
                     <span>VJ66+7H7 (Próximo à Shoprite), Tete</span>
                 </div>
                 <div class="info-row">
-                    <i class="fas fa-phone"></i>
-                    <span>Contacto via WhatsApp</span>
+                    <i class="fas fa-info-circle"></i>
+                    <span>Contacto disponível via WhatsApp</span>
                 </div>
                 <div class="btn-group">
-                    <a href="https://wa.me/258845106764" class="btn btn-whatsapp" style="flex: 2;"><i class="fab fa-whatsapp"></i> Contactar via WhatsApp</a>
+                    <a href="https://wa.me/258845106764" target="_blank" class="btn btn-whatsapp" style="flex: 1;"><i class="fab fa-whatsapp"></i> Contactar via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Nampula</div>
+        <div class="dealer-grid">
+            <div class="card">
+                <h3>Chacha Center</h3>
+                <div class="info-row">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Estrada Nacional No.1 FAINA (ao lado Bombas EXITO), Cidade de Nampula.</span>
+                </div>
+                <div class="info-row">
+                    <i class="fas fa-phone"></i>
+                    <span>+258 84 786 4007</span>
+                </div>
+                <div class="btn-group">
+                    <a href="tel:+258847864007" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
+                    <a href="https://wa.me/258847864007" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -229,7 +252,9 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 TOTAL TOOLS MOÇAMBIQUE. <br> Distribuição de Ferramentas Profissionais.</p>
+        <p><strong>TOTAL TOOLS MOÇAMBIQUE</strong></p>
+        <p>One-Stop Tools Station - Qualidade e Assistência Técnica</p>
+        <p style="margin-top: 25px; opacity: 0.7;">&copy; 2026 Todos os direitos reservados.</p>
     </footer>
 
 </body>
