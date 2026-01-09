@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOTAL TOOLS Moçambique | Dealers Oficiais</title>
+    <title>TOTAL MART | Único Distribuidor Oficial TOTAL TOOLS Moçambique</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Importando uma fonte robusta para base do Stencil */
         @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap');
 
         :root {
@@ -31,14 +30,13 @@
             border-bottom: 3px solid var(--main-color);
         }
 
-        /* Estilo Marketing Stencil Oblique */
         .logo-text {
             font-family: 'Big Shoulders Stencil Display', sans-serif;
             font-size: 42px;
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 3px;
-            font-style: italic; /* Oblique */
+            font-style: italic;
             color: var(--main-color);
             line-height: 1;
         }
@@ -46,139 +44,110 @@
         .hero {
             background-color: var(--main-color);
             color: white;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
-        .hero h1 { margin: 0; font-size: 24px; text-transform: uppercase; }
+        .hero h1 { margin: 0; font-size: 28px; text-transform: uppercase; letter-spacing: 1px; }
+        .hero p { opacity: 0.9; font-size: 18px; margin-top: 10px; }
 
-        .dealer-recruit {
-            background-color: #e6f0f1;
-            padding: 15px 20px;
-            text-align: center;
-            border-bottom: 1px solid #cce1e3;
-        }
-
-        .dealer-recruit p {
-            margin: 0;
-            font-weight: bold;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            color: var(--main-color);
-        }
-
-        .btn-recruit {
-            display: inline-block;
-            margin-left: 15px;
-            padding: 5px 15px;
-            background-color: var(--main-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 20px auto 60px;
+        .main-container {
+            max-width: 800px;
+            margin: -40px auto 60px;
             padding: 0 20px;
         }
 
-        .city-header {
-            background-color: var(--light-grey);
-            border-left: 6px solid var(--main-color);
-            margin: 40px 0 20px;
-            padding: 12px 20px;
-            font-size: 20px;
+        .official-badge {
+            background: #ffde00;
+            color: #000;
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
             font-weight: bold;
-            display: flex;
-            align-items: center;
+            font-size: 14px;
+            margin-bottom: 20px;
             text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        .city-header i { margin-right: 15px; }
-
-        .dealer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 25px;
+        .distributor-card {
             background: white;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,107,117,0.15);
+            border: 1px solid #eee;
+            text-align: center;
         }
 
-        .card:hover {
-            box-shadow: 0 8px 20px rgba(0,107,117,0.15);
-            transform: translateY(-3px);
-        }
-
-        .card h3 {
+        .distributor-card h2 {
+            font-size: 32px;
             margin-top: 0;
-            font-size: 20px;
             color: var(--main-color);
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
+        }
+
+        .info-section {
+            text-align: left;
+            margin: 30px auto;
+            max-width: 500px;
+            background: var(--light-grey);
+            padding: 25px;
+            border-radius: 10px;
         }
 
         .info-row {
             display: flex;
-            margin: 12px 0;
-            font-size: 15px;
+            margin: 15px 0;
+            font-size: 16px;
             line-height: 1.5;
-            color: #444;
+            color: #333;
         }
 
         .info-row i {
-            width: 30px;
+            width: 35px;
             color: var(--main-color);
-            font-size: 18px;
-            margin-top: 3px;
+            font-size: 20px;
         }
 
         .btn-group {
-            margin-top: auto;
-            display: flex;
-            gap: 12px;
-            padding-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
         }
 
         .btn {
-            flex: 1;
             text-align: center;
-            padding: 14px;
-            border-radius: 8px;
+            padding: 18px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 14px;
-            transition: 0.2s;
+            font-size: 16px;
+            transition: 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .btn-whatsapp { background-color: #25D366; color: white; }
         .btn-call { background-color: var(--main-color); color: white; }
-        .btn:hover { filter: brightness(0.9); }
+        .btn:hover { transform: translateY(-3px); filter: brightness(0.9); }
+
+        .recruit-box {
+            margin-top: 40px;
+            padding: 25px;
+            border: 2px dashed var(--main-color);
+            border-radius: 10px;
+            background-color: #f0f8f9;
+        }
+
+        .recruit-box h3 { margin-top: 0; font-size: 18px; }
 
         footer {
-            background-color: #f9f9f9;
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px;
+            color: #888;
             font-size: 14px;
-            color: #666;
-            border-top: 1px solid #eee;
         }
     </style>
 </head>
@@ -189,168 +158,47 @@
     </header>
 
     <section class="hero">
-        <h1>Lojas vendedoras de produtos TOTAL</h1>
-        <p>A melhor rede de ferramentas profissionais de Moçambique</p>
+        <div class="official-badge"><i class="fas fa-check-circle"></i> Canal Autorizado</div>
+        <h1>Distribuidor Oficial Exclusivo</h1>
+        <p>Garantia de qualidade e assistência técnica certificada em Moçambique.</p>
     </section>
 
-    <div class="dealer-recruit">
-        <p>
-            <i class="fas fa-handshake"></i> 
-            Aceitamos dealers em qualquer parte do país! 
-            <a href="https://wa.me/258843350200" class="btn-recruit" target="_blank">Contactar Expansão</a>
-        </p>
-    </div>
-
-    <div class="container">
-
-        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Maputo</div>
-        <div class="dealer-grid">
-            <div class="card">
-                <h3>Prestige Home</h3>
+    <div class="main-container">
+        <div class="distributor-card">
+            <h2>TOTAL MART</h2>
+            
+            <div class="info-section">
                 <div class="info-row">
                     <i class="fas fa-location-dot"></i>
-                    <span>Avenida Albert Lithuli nr 639 (Em frente ao mercado Mandela 2)</span>
+                    <span>Rua General Vieira da Rocha, N1373,<br>Bairro dos Pioneiros, Sofala, Beira</span>
                 </div>
                 <div class="info-row">
                     <i class="fas fa-phone"></i>
-                    <span>+258 87 348 4835</span>
+                    <span>+258 84 335 0200 <br> +258 84 335 0100</span>
                 </div>
-                <div class="btn-group">
-                    <a href="tel:+258873484835" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
-                    <a href="https://wa.me/258845106764" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <div class="info-row">
+                    <i class="fas fa-clock"></i>
+                    <span>Segunda a Sábado: Horário Comercial</span>
                 </div>
             </div>
 
-            <div class="card">
-                <h3>Toolmix24</h3>
-                <div class="info-row">
-                    <i class="fas fa-location-dot"></i>
-                    <span>39C Av. da Tanzania, Maputo 1104</span>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-phone"></i>
-                    <span>+258 84 984 0000</span>
-                </div>
-                <div class="btn-group">
-                    <a href="tel:+258849840000" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
-                    <a href="https://wa.me/258849840000" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
+            <div class="btn-group">
+                <a href="tel:+258843350200" class="btn btn-call"><i class="fas fa-phone"></i> Ligar Agora</a>
+                <a href="https://wa.me/258843350200" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+
+            <div class="recruit-box">
+                <h3>Expansão de Rede</h3>
+                <p>Interessado em ser um revendedor? Aceitamos parceiros em qualquer parte do país.</p>
+                <a href="https://wa.me/258843350200" target="_blank" style="color: var(--main-color); font-weight: bold; text-decoration: none;">Contactar Departamento de Expansão →</a>
             </div>
         </div>
-
-        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Beira</div>
-        <div class="dealer-grid">
-            <div class="card">
-                <h3>TOTAL Mart</h3>
-                <div class="info-row">
-                    <i class="fas fa-location-dot"></i>
-                    <span>Rua General Vieira da Rocha, N1373, Bairro dos Pioneiros, Sofala</span>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-phone"></i>
-                    <span>+258 84 335 0200 / 84 335 0100</span>
-                </div>
-                <div class="btn-group">
-                    <a href="tel:+258843350200" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
-                    <a href="https://wa.me/258843350200" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Chimoio</div>
-        <div class="dealer-grid">
-            <div class="card">
-                <h3>Hussein Farah Ulusow Ferragem</h3>
-                <div class="info-row">
-                    <i class="fas fa-location-dot"></i>
-                    <span>VFPJ+3JX, Rua Dos Trabalhadores, Chimoio</span>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-phone"></i>
-                    <span>+258 87 122 2907</span>
-                </div>
-                <div class="btn-group">
-                    <a href="tel:+258871222907" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
-                    <a href="https://wa.me/258871222907" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Saider Comercial Chimoio</h3>
-                <div class="info-row">
-                    <i class="fas fa-location-dot"></i>
-                    <span>VFPJ+QMP, Ave 25 de Setembro, Chimoio</span>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-phone"></i>
-                    <span>+258 87 250 0889</span>
-                </div>
-                <div class="btn-group">
-                    <a href="tel:+258872500889" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
-                    <a href="https://wa.me/258872500889" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3>Sense Trading</h3>
-                <div class="info-row">
-                    <i class="fas fa-location-dot"></i>
-                    <span>Rua cidade de lichinga Chimoio Manica, 2200</span>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-phone"></i>
-                    <span>+258 84 010 5816</span>
-                </div>
-                <div class="btn-group">
-                    <a href="tel:+258840105816" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
-                    <a href="https://wa.me/258840105816" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Tete</div>
-        <div class="dealer-grid">
-            <div class="card">
-                <h3>Top Total ferragem Tete</h3>
-                <div class="info-row">
-                    <i class="fas fa-location-dot"></i>
-                    <span>VJ66+7H7 (Próximo à Shoprite), Tete</span>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Contacto disponível via WhatsApp</span>
-                </div>
-                <div class="btn-group">
-                    <a href="https://wa.me/258845106764" target="_blank" class="btn btn-whatsapp" style="flex: 1;"><i class="fab fa-whatsapp"></i> Contactar via WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="city-header"><i class="fas fa-map-marker-alt"></i> Nampula</div>
-        <div class="dealer-grid">
-            <div class="card">
-                <h3>Chacha Center</h3>
-                <div class="info-row">
-                    <i class="fas fa-location-dot"></i>
-                    <span>Estrada Nacional No.1 FAINA (ao lado Bombas EXITO), Cidade de Nampula.</span>
-                </div>
-                <div class="info-row">
-                    <i class="fas fa-phone"></i>
-                    <span>+258 84 786 4007</span>
-                </div>
-                <div class="btn-group">
-                    <a href="tel:+258847864007" class="btn btn-call"><i class="fas fa-phone"></i> Ligar</a>
-                    <a href="https://wa.me/258847864007" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 
     <footer>
-        <p><strong>TOTAL TOOLS MOÇAMBIQUE</strong></p>
-        <p>One-Stop Tools Station - Qualidade e Assistência Técnica</p>
-        <p style="margin-top: 25px; opacity: 0.7;">&copy; 2026 Todos os direitos reservados.</p>
+        <p><strong>TOTAL MART - MOÇAMBIQUE</strong></p>
+        <p>One-Stop Tools Station</p>
+        <p style="margin-top: 20px;">&copy; 2026 Todos os direitos reservados.</p>
     </footer>
 
 </body>
